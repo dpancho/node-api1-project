@@ -84,7 +84,7 @@ server.put('/users/:id', (req, res) => {
     const info = req.body
     const { name, bio } = info
 
-    if(!name || !bio){
+    if(name || bio){
         res.status(400).json({ errorMessage: "Please provide name and bio for the user." })
     }
 
